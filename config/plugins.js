@@ -1,5 +1,6 @@
 module.exports = ({ env }) => ({
-    // ...
+    // Other plugin configurations...
+
     upload: {
         config: {
             provider: 'cloudinary',
@@ -15,6 +16,7 @@ module.exports = ({ env }) => ({
             },
         },
     },
+
     email: {
         config: {
             provider: 'nodemailer',
@@ -33,5 +35,12 @@ module.exports = ({ env }) => ({
             },
         },
     },
-    // ...
+
+    'users-permissions': {
+        config: {
+            jwtSecret: env('JWT_SECRET'),
+        },
+    },
+
+    // Other plugin configurations...
 });
